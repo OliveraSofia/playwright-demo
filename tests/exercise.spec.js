@@ -1,7 +1,7 @@
-const { test } = require('@playwright/test');
-const { ExercisePage } = require('../pages/exercise-page')
+import { test } from '@playwright/test';
+import { ExercisePage } from '../pages/exercise-page';
 
-test('getting started', async ({ page }) => {
+test('Verify Home Page Nav bar and header', async ({ page }) => {
     const exercisePage = new ExercisePage(page);
     await exercisePage.goto();
     await exercisePage.homeSmoke();
