@@ -1,6 +1,7 @@
 
         {
-            "baseUrl": "https://automationexercise.com/"
+            "baseUrl": "https://automationexercise.com/",
+            "productUrl" : "https://automationexercise.com/product_details/1"
 
         }
  
