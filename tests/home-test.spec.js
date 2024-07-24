@@ -19,6 +19,11 @@ test(' Check Slider is present', async ({page}) => {
   await homePage.testSlider();
 });
 
+test('Check product card', async ({page}) => {
+  const homePage = new HomePage(page);
+  await homePage.mouseHoverProduct()
+});
+
 test('Open view product page', async ({page}) => {
   const homePage = new HomePage(page);
   await homePage.viewProduct()

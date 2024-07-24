@@ -21,6 +21,8 @@ export class HomePage {
     this.categoryTitle = page.locator('h2', {hasText: "Category"})
     //Product
     this.viewProductButton = page.locator('a', {hasText: "View Product"}).first()
+    this.productCard = page.locator('//*[@class="productinfo text-center"]').first()
+    this.productOverlay = page.locator('.product-overlay').first()
     
   };
 
@@ -62,7 +64,14 @@ export class HomePage {
   async viewProduct (){
     await expect(this.viewProductButton).toBeVisible();
     await this.viewProductButton.click();
-    this.page.waitForURL(productUrl);
+    await this.page.waitForURL(productUrl);
+  }
+
+  async mouseHoverProduct (){
+    await this.productCard.hover()
+    await expect(this.productOverlay).toBeVisible()
+
+
   }
   
 }
